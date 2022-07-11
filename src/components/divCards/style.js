@@ -22,6 +22,21 @@ export const SectionCards = styled.section`
     align-items: center;
     margin-bottom: 20px;
 
+    svg {
+      color: var(--gray-50);
+      height: 100%;
+      width: 10%;
+      padding: 0 3px;
+      transition: 0.3s;
+      border-radius: 5px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: var(--gray-200);
+        color: var(--gray-600);
+      }
+    }
+
     ul {
       display: flex;
       width: 90%;
