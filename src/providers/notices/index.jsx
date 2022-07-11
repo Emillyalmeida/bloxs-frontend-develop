@@ -17,8 +17,10 @@ export const noticeContext = createContext([]);
 export const NoticeProvider = ({ children }) => {
   const [loadEnergy, setLoadEnergy] = useState(true);
   const [loadAgro, setLoadAgro] = useState(true);
+
   const [energy, setEnergy] = useState([]);
   const [agro, setAgro] = useState([]);
+
   const [pageEnergy, setPageEnergy] = useState(1);
   const [pageAgro, setPageAgro] = useState(1);
 
@@ -29,7 +31,7 @@ export const NoticeProvider = ({ children }) => {
       .then((res) => {
         console.log(res.data);
         setEnergy(res.data);
-        setEnergy(false);
+        setLoadEnergy(false);
       })
       .catch((err) => {
         console.log(err);
@@ -40,7 +42,7 @@ export const NoticeProvider = ({ children }) => {
     setLoadAgro(true);
 
     api
-      .get(`?_embed=1&categories=74&page=${pageAgro}&per_page=3`)
+      .get(`?_embed=1&categories=76&page=${pageAgro}&per_page=3`)
       .then((res) => {
         console.log(res.data);
         setAgro(res.data);
@@ -52,19 +54,25 @@ export const NoticeProvider = ({ children }) => {
   }, [pageAgro]);
 
   const NextPage = (title) => {
-    title === "Energia"
-      ? setPageEnergy(pageEnergy + 1)
-      : setPageAgro(pageAgro + 1);
+    if (title === "Energia") {
+      setPageEnergy(pageEnergy + 1);
+      return GetEnergy();
+    }
+
+    setPageAgro(pageAgro + 1);
+    return GetAgro();
   };
 
   const BeforePage = (title) => {
     if (title === "Energia") {
-      if (pageEnergy > 1) {
-        return setPageEnergy(pageEnergy - 1);
+      if (pageEnergy !== 1) {
+        setPageEnergy(pageEnergy - 1);
+        return GetEnergy();
       }
     }
-    if (pageAgro > 1) {
+    if (pageAgro !== 1) {
       setPageAgro(pageAgro - 1);
+      return GetAgro();
     }
   };
   return (
