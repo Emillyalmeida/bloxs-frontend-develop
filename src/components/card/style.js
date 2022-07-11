@@ -11,6 +11,7 @@ export const LiCard = styled.li`
 
   img {
     width: 100%;
+    height: 94px;
     border-radius: 6px;
   }
 
