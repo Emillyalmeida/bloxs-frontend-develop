@@ -1,9 +1,40 @@
-import app from "../../services/app";
+import useNotice from "../../providers/notices";
 
-const DivCard = ({ title }) => {
-  app.get("?_embed=1&categories=74&page=1&per_page=3");
-  return;
-  <h2>{title}</h2>;
+import { SectionCards } from "./style";
+
+import { FaBackward, FaForward } from "react-icons/fa";
+import Card from "../card";
+
+const DivCard = () => {
+  const { energy, agro, loadEnergy, loadAgro } = useNotice();
+  return (
+    <SectionCards>
+      <h2>Energia</h2>
+      <div>
+        <FaBackward />
+        <ul>
+          {loadEnergy ? (
+            <>Carregando...</>
+          ) : (
+            energy.map((notice) => <Card key={notice.id} notice={notice} />)
+          )}
+        </ul>
+        <FaForward />
+      </div>
+      <h2>Agronegocio</h2>
+      <div>
+        <FaBackward />
+        <ul>
+          {loadAgro ? (
+            <>Carregando...</>
+          ) : (
+            agro.map((notice) => <Card key={notice.id} notice={notice} />)
+          )}
+        </ul>
+        <FaForward />
+      </div>
+    </SectionCards>
+  );
 };
 
 export default DivCard;
