@@ -1,18 +1,31 @@
 import styled from "styled-components";
 
 export const LiCard = styled.li`
-  display: flex;
-  flex-direction: column;
-  padding: 10px;
-  width: 180px;
-  height: 250px;
-  justify-content: space-between;
-  gap: 8px;
+  width: 100%;
+  height: 240px;
+
+  @media (min-width: 769px) {
+    width: 250px;
+    height: 300px;
+  }
+  a {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+    gap: 8px;
+    align-items: center;
+  }
 
   img {
     width: 100%;
-    height: 94px;
+    height: calc(100% * 0.55);
     border-radius: 6px;
+    @media (min-width: 769px) {
+      height: 153px;
+    }
   }
 
   h4 {
@@ -23,5 +36,6 @@ export const LiCard = styled.li`
   span {
     color: var(--gray-600);
     font-size: 0.75rem;
+    align-self: flex-start;
   }
 `;

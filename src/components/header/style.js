@@ -32,6 +32,11 @@ export const DivHeader = styled.header`
 
     svg {
       color: var(--gray-600);
+      cursor: pointer;
+
+      &:hover {
+        opacity: 0.7;
+      }
     }
   }
 `;

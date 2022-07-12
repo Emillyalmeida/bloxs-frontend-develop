@@ -25,7 +25,7 @@ export const SectionCards = styled.section`
     svg {
       color: var(--gray-50);
       height: 100%;
-      width: 10%;
+      width: 22px;
       padding: 0 3px;
       transition: 0.3s;
       border-radius: 5px;
@@ -39,8 +39,12 @@ export const SectionCards = styled.section`
 
     ul {
       display: flex;
+      flex-direction: column;
       width: 90%;
       justify-content: space-between;
+      @media (min-width: 768px) {
+        flex-direction: row;
+      }
     }
   }
 `;
