@@ -6,7 +6,7 @@ export const LiCard = styled.li`
 
   @media (min-width: 769px) {
     width: 250px;
-    height: 300px;
+    height: 280px;
   }
   a {
     display: flex;
@@ -20,7 +20,8 @@ export const LiCard = styled.li`
 
     img {
       width: 100%;
-      height: calc(100% * 0.55);
+      height: auto;
+      min-height: 115px;
       border-radius: 6px;
       @media (min-width: 769px) {
         height: 153px;
@@ -28,7 +29,7 @@ export const LiCard = styled.li`
     }
 
     h4 {
-      color: var(--gray-800);
+      color: ${(props) => props.theme.colorSecundary};
       font-size: 0.8rem;
     }
 

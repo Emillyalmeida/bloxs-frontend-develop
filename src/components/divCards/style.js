@@ -5,10 +5,10 @@ export const SectionCards = styled.section`
   flex-direction: column;
   border-radius: 7px;
   width: 95%;
-  background-color: var(--gray-50);
+  background-color: ${(props) => props.theme.backgroundColor};
 
   h2 {
-    color: var(--gray-900);
+    color: ${(props) => props.theme.color};
     padding: 15px;
     border-bottom: 1px dotted var(--gray-400);
   }
@@ -23,7 +23,7 @@ export const SectionCards = styled.section`
     margin-bottom: 20px;
 
     svg {
-      color: var(--gray-50);
+      color: ${(props) => props.theme.backgroundColor};
       height: 100%;
       width: 22px;
       padding: 0 3px;
@@ -36,7 +36,7 @@ export const SectionCards = styled.section`
       }
 
       &:hover {
-        background-color: var(--gray-200);
+        background-color: ${(props) => props.theme.secundaryBg};
         color: var(--gray-600);
       }
     }

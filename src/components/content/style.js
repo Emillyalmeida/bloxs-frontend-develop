@@ -6,6 +6,6 @@ export const DivContent = styled.div`
   align-items: center;
   flex: 1;
   height: auto;
-  background-color: var(--gray-200);
+  background-color: ${(props) => props.theme.secundaryBg};
   gap: 30px;
 `;
