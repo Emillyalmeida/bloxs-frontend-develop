@@ -13,4 +13,4 @@ Esse desafio consiste em uma página de notícias no estilo "Netflix", onde são
 
 ### App
 
-### [Acesse a Demo](https://marvels-house.vercel.app/)
+### [Acesse a Demo]()
