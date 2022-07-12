@@ -14,8 +14,11 @@ function App() {
 
   useEffect(() => {
     GetEnergy();
+  }, [GetEnergy]);
+
+  useEffect(() => {
     GetAgro();
-  }, []);
+  }, [GetAgro]);
 
   return (
     <>

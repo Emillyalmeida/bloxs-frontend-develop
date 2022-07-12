@@ -56,23 +56,24 @@ export const NoticeProvider = ({ children }) => {
   const NextPage = (title) => {
     if (title === "Energia") {
       setPageEnergy(pageEnergy + 1);
-      return GetEnergy();
+      console.log(pageEnergy);
+      return;
     }
 
     setPageAgro(pageAgro + 1);
-    return GetAgro();
+    return;
   };
 
   const BeforePage = (title) => {
     if (title === "Energia") {
       if (pageEnergy !== 1) {
         setPageEnergy(pageEnergy - 1);
-        return GetEnergy();
+        return;
       }
     }
     if (pageAgro !== 1) {
       setPageAgro(pageAgro - 1);
-      return GetAgro();
+      return;
     }
   };
   return (
