@@ -17,25 +17,25 @@ export const LiCard = styled.li`
     justify-content: space-between;
     gap: 8px;
     align-items: center;
-  }
 
-  img {
-    width: 100%;
-    height: calc(100% * 0.55);
-    border-radius: 6px;
-    @media (min-width: 769px) {
-      height: 153px;
+    img {
+      width: 100%;
+      height: calc(100% * 0.55);
+      border-radius: 6px;
+      @media (min-width: 769px) {
+        height: 153px;
+      }
     }
-  }
 
-  h4 {
-    color: var(--gray-800);
-    font-size: 0.8rem;
-  }
+    h4 {
+      color: var(--gray-800);
+      font-size: 0.8rem;
+    }
 
-  span {
-    color: var(--gray-600);
-    font-size: 0.75rem;
-    align-self: flex-start;
+    span {
+      color: var(--gray-600);
+      font-size: 0.75rem;
+      align-self: flex-start;
+    }
   }
 `;
