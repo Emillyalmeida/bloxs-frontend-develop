@@ -13,4 +13,4 @@ Esse desafio consiste em uma página de notícias no estilo "Netflix", onde são
 
 ### App
 
-### [Acesse a Demo]()
+### [Acesse a Demo](https://bloxs-frontend-develop.vercel.app)
