@@ -31,6 +31,10 @@ export const SectionCards = styled.section`
       border-radius: 5px;
       cursor: pointer;
 
+      @media (min-width: 769px) {
+        width: 40px;
+      }
+
       &:hover {
         background-color: var(--gray-200);
         color: var(--gray-600);
