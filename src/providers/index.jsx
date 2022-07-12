@@ -1,7 +1,12 @@
 import { NoticeProvider } from "./notices";
+import { ColorProvider } from "./theme";
 
 const Providers = ({ children }) => {
-  return <NoticeProvider>{children}</NoticeProvider>;
+  return (
+    <ColorProvider>
+      <NoticeProvider>{children}</NoticeProvider>;
+    </ColorProvider>
+  );
 };
 
 export default Providers;

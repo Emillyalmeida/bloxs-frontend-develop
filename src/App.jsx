@@ -8,6 +8,9 @@ import Header from "./components/header";
 import useNotice from "./providers/notices";
 
 import GlobalStyle from "./style/global";
+import { ThemeProvider } from "styled-components";
+import useTheme from "./providers/theme";
+import { themes } from "./style/theme";
 
 function App() {
   const { GetAgro, GetEnergy } = useNotice();
@@ -20,16 +23,20 @@ function App() {
     GetAgro();
   }, [GetAgro]);
 
+  const { currentTheme } = useTheme();
+
   return (
     <>
-      <GlobalStyle />
-      <Container>
-        <Aside />
-        <Content>
-          <Header title="Noticias" />
-          <DivCard />
-        </Content>
-      </Container>
+      <ThemeProvider theme={themes[currentTheme]}>
+        <GlobalStyle />
+        <Container>
+          <Aside />
+          <Content>
+            <Header title="Noticias" />
+            <DivCard />
+          </Content>
+        </Container>
+      </ThemeProvider>
     </>
   );
 }
