@@ -32,7 +32,7 @@ function App() {
         <Container>
           <Aside />
           <Content>
-            <Header title="Noticias" />
+            <Header title="Notícias" />
             <DivCard />
           </Content>
         </Container>

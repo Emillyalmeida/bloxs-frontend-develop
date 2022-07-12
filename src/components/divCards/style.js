@@ -22,6 +22,13 @@ export const SectionCards = styled.section`
     align-items: center;
     margin-bottom: 20px;
 
+    &:hover {
+      svg {
+        background-color: ${(props) => props.theme.secundaryBg};
+        color: var(--gray-600);
+      }
+    }
+
     svg {
       color: ${(props) => props.theme.backgroundColor};
       height: 100%;
@@ -32,12 +39,7 @@ export const SectionCards = styled.section`
       cursor: pointer;
 
       @media (min-width: 769px) {
-        width: 40px;
-      }
-
-      &:hover {
-        background-color: ${(props) => props.theme.secundaryBg};
-        color: var(--gray-600);
+        width: 30px;
       }
     }
 

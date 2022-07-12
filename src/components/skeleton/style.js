@@ -16,6 +16,7 @@ export const DivSkeleton = styled.div`
   gap: 8px;
   width: 100%;
   height: 220px;
+  padding: 10px;
 
   @media (min-width: 769px) {
     width: 250px;
