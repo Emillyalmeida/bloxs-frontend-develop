@@ -7,11 +7,11 @@ export const DivHeader = styled.header`
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  background-color: var(--gray-50);
+  background-color: ${(props) => props.theme.backgroundColor};
 
   h2 {
     font-weight: 700;
-    color: var(--gray-900);
+    color: ${(props) => props.theme.color};
     font-size: 0.9rem;
   }
 
