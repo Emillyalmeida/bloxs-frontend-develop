@@ -3,6 +3,7 @@ import useNotice from "../../providers/notices";
 import { SectionCards } from "./style";
 
 import { FaBackward, FaForward } from "react-icons/fa";
+
 import Card from "../card";
 import Skeleton from "../skeleton";
 

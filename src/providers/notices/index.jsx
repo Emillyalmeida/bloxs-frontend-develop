@@ -1,4 +1,5 @@
 import api from "../../services/api";
+
 import { useCallback, useContext } from "react";
 import { createContext, useState } from "react";
 
@@ -29,7 +30,6 @@ export const NoticeProvider = ({ children }) => {
     api
       .get(`?_embed=1&categories=74&page=${pageEnergy}&per_page=3`)
       .then((res) => {
-        console.log(res.data);
         setEnergy(res.data);
         setLoadEnergy(false);
       })
@@ -44,7 +44,6 @@ export const NoticeProvider = ({ children }) => {
     api
       .get(`?_embed=1&categories=76&page=${pageAgro}&per_page=3`)
       .then((res) => {
-        console.log(res.data);
         setAgro(res.data);
         setLoadAgro(false);
       })
@@ -56,7 +55,6 @@ export const NoticeProvider = ({ children }) => {
   const NextPage = (title) => {
     if (title === "Energia") {
       setPageEnergy(pageEnergy + 1);
-      console.log(pageEnergy);
       return;
     }
 

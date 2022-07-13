@@ -1,6 +1,7 @@
 import { DivHeader } from "./style";
 
 import { FaUserAlt, FaQuestion, FaBell } from "react-icons/fa";
+
 import BtnMode from "../btnMode";
 
 const Header = ({ title }) => {
